@@ -233,7 +233,7 @@ export default function Home() {
 ```
 
 `app/global.css`
-f
+
 This file is responsible for managing all the styles and visual aspects of our application. It ensures a consistent and cohesive look and feel throughout the entire application.
 
 ```css
@@ -381,10 +381,13 @@ Continuous Deployment (CD) is the practice of automatically deploying every chan
 In the context of our To-Do project hosted on Truehost, setting up Continuous Deployment (CD) ensures seamless and efficient deployment of code changes. Truehost integrates with cPanel, simplifying the process of automating deployments directly from your GitHub repository. Below, we'll guide you through activating your cPanel account, connecting your GitHub repository, and configuring deployment automation using a `.cpanel.yml` file. Note that this tutorial assumes you have a web hosting service with Truehost, as cPanel access is required. Without a web hosting service, you will not have access to cPanel. If you need to create a one, follow this link to [Truehost](https://truehost.com/web-hosting/).
 
 - **Activating cPanel account on Truehost:** To activate the cPanel account, log in to your Truehost account and navigate to the cPanel section.
+  ![Activating cPanel](https://lh3.googleusercontent.com/drive-viewer/AKGpihayOpAJ9Cn-q0LnK7xOtJHCKxZlCo8aS7bNdcbYWJJl8zhhe0lSGzpt--5vWR23UtGwf76_J6xHNWd45THO70j8rEi1C2rETVw=s1600-rw-v1)
 
 - **Connecting GitHub repository:** Log in to your cPanel account through Truehost. In cPanel, find and click on the Git Version Control feature.
+  ![Activating cPanel](https://lh3.googleusercontent.com/drive-viewer/AKGpihb2W4gbA1heAk26dpO0fmr6_qHL_qtMEah_90fYmHLVfiXt2o1eicy3vlbl82OUd7Vo8Z3xzfdZ7ouc-AF5i-2qD0D9D1c0eNE=s1600-rw-v1)
 
-- **Create repository:** Click on Create to set up a new repository. Enter the repository name and the GitHub repository URL (e.g., `https://github.com/yourusername/your-repo.git`) and choose the deployment directory where you want your application to be deployed and click Create for private repositories you need to create a SSH Key click [here](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-set-up-access-to-private-repositories/) to understand how to create one and its public key to github repository.
+- **Create Repository**: Click on Create to set up a new repository. Enter the repository name and the GitHub repository URL (e.g., `https://github.com/yourusername/your-repo.git`). Choose the deployment directory where you want your application to be deployed and click Create. For private repositories, you need to create an SSH key. Follow [this guide](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-set-up-access-to-private-repositories/) to create an SSH key and add its public key to your GitHub repository.
+  ![Activating cPanel](https://lh3.googleusercontent.com/drive-viewer/AKGpihYRoYJxYa8ey2u0qUSlXJvvYCDM5lUJpVEyYKiIzeEnYx6AgNS2P0KMHooPntUQ2GMV0gi89EDkmwcqFfzm3GkRM6l-aaDG1AQ=s1600-rw-v1)
 
 ### Deployment automation with `.cpanel.yml`
 
@@ -450,13 +453,9 @@ git commit -m "ci/cd integration"
 git push origin main
 ```
 
-Once you push the changes, GitHub will automatically execute the workflow defined in your `main.yml` file. The GIF below demonstrates GitHub executing the actions:
-
-![CI](#)
-
 To update our server, we need to log in to our cPanel and pull our recent changes from GitHub. Upon pulling the changes, it will automatically execute the tasks in the `.cpanel.yml` file. Once the process is completed, our updates will reflect on our website. The GIF below shows how to pull the changes in cPanel:
 
-![CD](#)
+![CD](https://lh3.googleusercontent.com/drive-viewer/AKGpihZOSbv0HAw2HxB2OTfJJ7-2aT0Vve3tShIXUb5mPlNeOa783ElrL2v5872_oIdGcpyrrPvxdrfHVsbCPke2HvJUIJywtclAEZE=s1600-rw-v1)
 
 ### Conclusion
 
